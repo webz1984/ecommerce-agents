@@ -1,0 +1,13 @@
+{
+  "venture": "",
+  "created": "",
+  "stages": {
+    "brainstorm": { "status": "pending" },
+    "market_research": { "status": "pending", "approved_ranks": [] },
+    "sourcing": { "status": "pending", "mode": null },
+    "summary": { "status": "pending" },
+    "sales": { "status": "pending" },
+    "cfo": { "status": "pending", "decision": null }
+  },
+  "log": []
+}

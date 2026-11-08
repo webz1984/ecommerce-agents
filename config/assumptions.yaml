@@ -1,0 +1,52 @@
+# Defaults the agents start from. Edit these to match your situation.
+# Fee and duty values are placeholders: the CFO agent must look up current
+# figures (see verify_at) and record the source in the venture's model.json.
+
+founder:
+  market: US
+  currency: USD
+  max_first_order_cash_usd: 5000     # cash cap for samples + first order + launch ads
+  cash_buffer_pct: 20                # keep this % of the cap unspent
+
+targets:
+  min_net_margin_pct: 20             # after all costs incl. ads, at steady state
+  min_roi_pct: 50                    # net profit / landed inventory cost per cycle
+  launch_margin_floor_pct: 0         # break-even allowed during launch phase
+
+inventory:
+  safety_stock_days: 21
+  test_phase_days: 30
+  launch_phase_days: 60
+
+returns:
+  default_return_rate_pct: 5         # varies a lot by category; research it
+  unsellable_share_of_returns_pct: 50
+
+channels:
+  amazon_fba:
+    referral_fee_pct: 15             # placeholder; many categories are 15%, some differ
+    verify_at: https://sellercentral.amazon.com/help/hub/reference/external/GTG4BAWSY39Z98Z3
+    fulfilment_fee_per_unit: null    # depends on size/weight tier; look it up
+    fulfilment_verify_at: https://sell.amazon.com/pricing
+  walmart:
+    referral_fee_pct: 15             # placeholder
+    verify_at: https://marketplace.walmart.com/referral-fees/
+  etsy:
+    verify_at: https://www.etsy.com/legal/fees/
+  ebay:
+    verify_at: https://www.ebay.com/help/selling/fees-credits-invoices/selling-fees
+  tiktok_shop:
+    verify_at: https://seller-us.tiktok.com/
+  shopify:
+    payment_processing_pct: 2.9      # placeholder
+    payment_processing_fixed: 0.30   # placeholder
+    verify_at: https://www.shopify.com/pricing
+
+import:
+  duty_verify_at: https://hts.usitc.gov/
+  extra_china_tariffs_verify_at: https://ustr.gov/
+  cbp_fees_verify_at: https://www.cbp.gov/
+  note: >
+    Tariffs on goods from China have changed many times recently, and US
+    de minimis treatment for low-value shipments has been removed. Always
+    look up the rates in force on the run date.
